@@ -1,0 +1,64 @@
+2020-12-07 15:35:22,523 INFO Starting Nacos v1.2.1 on DESKTOP-L0GV53V with PID 10812 (C:\Users\handsure\Desktop\nacos\target\nacos-server.jar started by handsure in C:\Users\handsure\Desktop\nacos\bin)
+
+2020-12-07 15:35:22,528 INFO The following profiles are active: standalone
+
+2020-12-07 15:35:25,405 INFO Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration$$EnhancerBySpringCGLIB$$9b21802a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-12-07 15:35:25,530 INFO Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-12-07 15:35:25,534 INFO Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@6f204a1a' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-12-07 15:35:25,536 INFO Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration$$EnhancerBySpringCGLIB$$bff622dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-12-07 15:35:25,540 INFO Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+
+2020-12-07 15:35:26,341 INFO Tomcat initialized with port(s): 8848 (http)
+
+2020-12-07 15:35:26,377 INFO Starting service [Tomcat]
+
+2020-12-07 15:35:26,377 INFO Starting Servlet Engine: Apache Tomcat/9.0.13
+
+2020-12-07 15:35:26,393 INFO The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\tools\jdk\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\ProgramData\Oracle\Java\javapath;C:\tools\xftp\;C:\tools\xshell\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\tools\jdk\bin;C:\tools\jdk\jre\bin;C:\tools\Git\Git\cmd;C:\tools\Git\TortoiseGit\bin;C:\tools\mongodb\bin;C:\Program Files\MySQL\MySQL Server 8.0\bin;C:\tools\maven\apache-maven-3.6.3\bin;C:\tools\gradle\gradle-6.6.1\bin;C:\tools\nodejs\;C:\tools\tomcat\apache-tomcat-9.0.40\lib;C:\tools\tomcat\apache-tomcat-9.0.40\lib\servlet-api.jar;C:\tools\tomcat\apache-tomcat-9.0.40\lib\jsp-api.jar;C:\Users\handsure\AppData\Local\Microsoft\WindowsApps;;C:\tools\idea\IntelliJ IDEA 2020.2\bin;;C:\Users\handsure\AppData\Roaming\npm;C:\tools\vsCode\Microsoft VS Code\bin;.]
+
+2020-12-07 15:35:26,493 INFO Initializing Spring embedded WebApplicationContext
+
+2020-12-07 15:35:26,493 INFO Root WebApplicationContext: initialization completed in 3901 ms
+
+2020-12-07 15:35:29,001 INFO Reflections took 52 ms to scan 1 urls, producing 6 keys and 24 values 
+
+2020-12-07 15:35:29,061 INFO Reflections took 4 ms to scan 1 urls, producing 2 keys and 12 values 
+
+2020-12-07 15:35:29,069 INFO Reflections took 4 ms to scan 1 urls, producing 3 keys and 15 values 
+
+2020-12-07 15:35:29,870 INFO Use Mysql as the driver
+
+2020-12-07 15:35:30,551 INFO Initializing ExecutorService 'applicationTaskExecutor'
+
+2020-12-07 15:35:30,783 INFO Adding welcome page: class path resource [static/index.html]
+
+2020-12-07 15:35:31,197 INFO Creating filter chain: Ant [pattern='/**'], []
+
+2020-12-07 15:35:31,249 INFO Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@6cbcf243, org.springframework.security.web.context.SecurityContextPersistenceFilter@6e1d8f9e, org.springframework.security.web.header.HeaderWriterFilter@2453f95d, org.springframework.security.web.csrf.CsrfFilter@1bb1fde8, org.springframework.security.web.authentication.logout.LogoutFilter@305f7627, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62fe6067, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@56ace400, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@29e6eb25, org.springframework.security.web.session.SessionManagementFilter@2dbe250d, org.springframework.security.web.access.ExceptionTranslationFilter@22d6f11]
+
+2020-12-07 15:35:31,384 INFO Exposing 2 endpoint(s) beneath base path '/actuator'
+
+2020-12-07 15:35:31,419 INFO Initializing ExecutorService 'taskScheduler'
+
+2020-12-07 15:35:31,559 INFO Tomcat started on port(s): 8848 (http) with context path '/nacos'
+
+2020-12-07 15:35:31,568 INFO Started Nacos in 10.212 seconds (JVM running for 10.886)
+
+2020-12-07 15:35:31,568 INFO Nacos logs files: C:\Users\handsure\Desktop\nacos\logs\
+
+2020-12-07 15:35:31,569 INFO Nacos conf files: C:\Users\handsure\Desktop\nacos\conf\
+
+2020-12-07 15:35:31,570 INFO Nacos data files: C:\Users\handsure\Desktop\nacos\data\
+
+2020-12-07 15:35:31,570 INFO Nacos started successfully in stand alone mode.
+
+2020-12-07 15:35:31,676 INFO Initializing Spring DispatcherServlet 'dispatcherServlet'
+
+2020-12-07 15:35:31,677 INFO Initializing Servlet 'dispatcherServlet'
+
+2020-12-07 15:35:31,690 INFO Completed initialization in 13 ms
+

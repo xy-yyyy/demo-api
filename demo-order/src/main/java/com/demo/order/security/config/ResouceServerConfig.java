@@ -1,6 +1,6 @@
 package com.demo.order.security.config;
 
-import com.demo.order.security.exception.AuthExceptionEntryPoint;
+import com.demo.order.security.handler.AuthExceptionEntryPoint;
 import com.demo.order.security.handler.CustomAccessDeniedHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

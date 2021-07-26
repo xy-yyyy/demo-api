@@ -1,7 +1,9 @@
 package com.demo.basic.security.config;
 
+import com.demo.basic.config.YmlAndPropertySourceFactory;
 import lombok.Getter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
 /**
@@ -12,6 +14,7 @@ import org.springframework.stereotype.Component;
 @Getter
 @Component
 @ConfigurationProperties(prefix = "jwt")
+@PropertySource(value = {"classpath:config/tokenconfig.yml"},factory = YmlAndPropertySourceFactory.class)
 public class JWTConfig {
     /**
      * 密钥KEY

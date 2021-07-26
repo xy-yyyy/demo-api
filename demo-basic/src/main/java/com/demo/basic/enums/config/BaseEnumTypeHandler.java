@@ -22,13 +22,13 @@ public class BaseEnumTypeHandler<E extends BaseEnum> extends BaseTypeHandler<Bas
 						throw new IllegalArgumentException("Type argument cannot be null");
 				}
 				this.enumType = type;
-				E[] enums = enumType.getEnumConstants();
+				/*E[] enums = enumType.getEnumConstants();
 				if (enums == null) {
 						throw new IllegalArgumentException(type.getSimpleName() + " does not represent an enum type.");
 				}
 				for (E e : enums) {
 						enumMap.put(e.getCode(), e);
-				}
+				}*/
 		}
 
 		/**

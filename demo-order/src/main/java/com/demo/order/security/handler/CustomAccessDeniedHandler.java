@@ -13,9 +13,9 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * @Description: 认证过的用户访问无权限资源时的异常
  * @Author: sunYF
- * @Description: 权限不足异常类重写
- * @Date: Create in 11:52 2020/11/20
+ * @Date: 2021/6/17 15:30
  */
 @Component
 public class CustomAccessDeniedHandler implements AccessDeniedHandler {

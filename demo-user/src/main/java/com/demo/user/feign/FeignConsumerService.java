@@ -6,13 +6,17 @@ package com.demo.user.feign;
  * @Date: Create in 14:06 2020/8/28
  */
 
+import com.demo.common.vo.ErrorCode;
+import com.demo.common.vo.ResultPojo;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@FeignClient(value = "demo-order",fallback = FeignConsumerService.DefaultFallback.class)
+@FeignClient(name = "demo-order",fallback = FeignConsumerService.DefaultFallback.class)
 @Service
 public interface FeignConsumerService {
 
@@ -23,8 +27,8 @@ public interface FeignConsumerService {
      *  @return
      *  @date 2019/8/15 1:11
      */
-    @RequestMapping("/order/hello")
-    String FeignOrderHello(@RequestParam(value = "name", defaultValue = "aaa", required = false) String name);
+    @GetMapping("/order/hello")
+    ResultPojo hello(@RequestParam("userId") String userId);
 
 
     /**
@@ -34,8 +38,8 @@ public interface FeignConsumerService {
    class DefaultFallback implements FeignConsumerService{
 
         @Override
-        public String FeignOrderHello(String name) {
-            return "feign callback";
+        public ResultPojo hello(String userId) {
+            return ResultPojo.builder().code(ErrorCode.ERROR.getCode()).message(ErrorCode.ERROR.getMsg()).object("feign callback").build();
         }
     }
 }

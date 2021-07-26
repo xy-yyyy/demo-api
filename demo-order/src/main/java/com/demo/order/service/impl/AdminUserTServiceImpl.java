@@ -13,6 +13,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import tk.mybatis.mapper.entity.Example;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Service
 @Slf4j
 public class AdminUserTServiceImpl implements AdminUserTService {
@@ -54,6 +57,15 @@ public class AdminUserTServiceImpl implements AdminUserTService {
         adminUserT.setRemoved(Boolean.FALSE);
         int insert = adminUserTMapper.insert(adminUserT);
         return null;
+    }
+
+    @Override
+    public Set<String> selectPerByUserId(String userId) {
+        //获取权限
+        Set<String> set=new HashSet<>();
+        set.add("o1");
+        set.add("o2");
+        return set;
     }
 
 }

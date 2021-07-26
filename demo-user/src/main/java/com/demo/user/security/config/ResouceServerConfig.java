@@ -1,6 +1,6 @@
 package com.demo.user.security.config;
 
-import com.demo.user.security.exception.AuthExceptionEntryPoint;
+import com.demo.user.security.handler.AuthExceptionEntryPoint;
 import com.demo.user.security.handler.CustomAccessDeniedHandler;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;

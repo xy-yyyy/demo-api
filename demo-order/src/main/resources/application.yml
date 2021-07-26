@@ -19,9 +19,12 @@ spring:
     time-zone: GMT+8
   mvc:
     date-format: yyyy-MM-dd HH:mm:ss
-feign:
-  hystrix:
-    enabled: true
+#feign:
+#  hystrix:
+#    enabled: true
+ribbon:
+  ReadTimeout: 5000      # 指的是建立连接所用的时间，适用于网络状况正常的情况下，两端连接所用的时间。
+  ConnectTimeout: 5000   # 指的是建立连接后从服务器读取到可用资源所用的时间。
 pagehelper:
   helperDialect: mysql
   reasonable: true
@@ -42,17 +45,7 @@ dubbo:
   port: -1
  consumer:
   check: false
-jwt:
-  # 密匙KEY
- secret: QzQ1MjhFMzdBNzhDOTI3QTkzOEE2QzJBN0Q1MUY5N0Y
-  # HeaderKEY
- tokenHeader: Authorization
-  # Token前缀字符
- tokenPrefix: sunYF-
-  # 过期时间 单位秒 1天后过期=86400 7天后过期=604800
- expiration: 86400
-  # 配置不需要认证的接口
- #antMatchers: /index/**,/login/**,/favicon.ico
+
 seata:
   enabled: true
   application-id: demo-order
@@ -134,7 +127,7 @@ spring:
   profiles: test
   datasource:
     hikari:
-      jdbc-url: jdbc:mysql://127.0.0.1:3306/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&failOverReadOnly=false&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false
+      jdbc-url: jdbc:mysql://127.0.0.1:3308/test?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&autoReconnect=true&failOverReadOnly=false&autoReconnect=true&rewriteBatchedStatements=TRUE&useSSL=false
       username: root
       password: root
       driver-class-name: com.mysql.cj.jdbc.Driver

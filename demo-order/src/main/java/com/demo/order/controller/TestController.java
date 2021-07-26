@@ -1,5 +1,7 @@
 package com.demo.order.controller;
 
+import com.demo.common.vo.ResultCode;
+import com.demo.common.vo.ResultPojo;
 import com.demo.order.pojo.adminUserT.AdminUserTAddParam;
 import com.demo.order.service.AdminUserTService;
 import com.demo.order.utils.GsonUtils;
@@ -22,10 +24,15 @@ public class TestController {
 @Autowired
 AdminUserTService adminUserTService;
 
+	@GetMapping("/hello")
+	public ResultPojo hello(@RequestParam(value="userId",required = false) String userId){
+		return ResultPojo.builder().code(ResultCode.SUCCESS.getCode()).message(ResultCode.SUCCESS.getMsg()).object(adminUserTService.selectPerByUserId(userId)).build();
+	}
+
+
 
 		@GetMapping("/testHandlers")
 		public Object testHandlers(){
-
 				return adminUserTService.selectAll();
 		}
 
@@ -40,7 +47,7 @@ AdminUserTService adminUserTService;
 		 */
 
 		@GetMapping("/o/o1")
-		@PreAuthorize("hasAnyAuthority('1')")
+		@PreAuthorize("hasAnyAuthority('o1')")
 		//@PreAuthorize("hasAnyAuthority('p1','p2')")
 		public String o1() {
 				return "资源1";
@@ -55,7 +62,7 @@ AdminUserTService adminUserTService;
 		}
 
 		@GetMapping("/o/o3")
-		@PreAuthorize("hasAnyAuthority('3')")
+		@PreAuthorize("hasAnyAuthority('o3')")
 		//@PreAuthorize("hasAnyAuthority('p1','p2')")
 		public String o3() {
 				return "资源3";

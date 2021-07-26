@@ -1,0 +1,11 @@
+jwt:
+  # 密匙KEY
+  secret: QzQ1MjhFMzdBNzhDOTI3QTkzOEE2QzJBN0Q1MUY5N0Y
+  # HeaderKEY
+  tokenHeader: Authorization
+  # Token前缀字符
+  tokenPrefix: sunYF-
+  # 过期时间 单位秒 1天后过期60*60*1000*24
+  expiration: 86400000
+  # 配置不需要认证的接口
+  #antMatchers: /index/**,/login/**,/favicon.ico

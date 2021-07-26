@@ -33,19 +33,19 @@ mybatis:
 
 
 
-#dubbo:
-# registry:
-#  check: false
-#  address: nacos://192.168.2.7:8848
-# application:
-#  name: basic-dubbo
-# scan:
-#  basePackages: com.demo.basic.service.impl.dubbo
-# protocol:
-#  name: dubbo
-#  port: -1
-# consumer:
-#  check: false
+dubbo:
+ registry:
+  check: false
+  address: nacos://192.168.2.7:8848
+ application:
+  name: basic-dubbo
+ scan:
+  basePackages: com.demo.basic.service.impl.dubbo
+ protocol:
+  name: dubbo
+  port: -1
+ consumer:
+  check: false
 jwt:
   # 密匙KEY
   secret: QzQ1MjhFMzdBNzhDOTI3QTkzOEE2QzJBN0Q1MUY5N0Y
